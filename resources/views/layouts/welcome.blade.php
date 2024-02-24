@@ -13,7 +13,7 @@
     </script>
 </head>
 
-<body>
+<body class="py-1 bg-dark">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Project</a>
@@ -34,7 +34,7 @@
             </div>
         </div>
     </nav>
-    <div class="container py-2">
+    <div class="text text-white">
         @yield('content')
     </div>
 </body>
