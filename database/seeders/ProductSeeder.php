@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Faker\Factory as Faker;
 
-class DatabaseSeeder extends Seeder
+class ProductSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
     {
         $faker = Faker::create();
         foreach (range(1,50) as $index) {
-            DB :: table('customers') -> insert([
+            DB :: table('products') -> insert([
                 'username' => $faker->username,
-                'firstname' => $faker->firstname,
+                'firstname' => $faker->firstname, //ksjdhfk
                 'lastname' => $faker->lastname,
                 'password'=> $faker->password,
                 'email'=> $faker->email,
