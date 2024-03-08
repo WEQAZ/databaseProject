@@ -18,7 +18,7 @@ class ProductSeeder extends Seeder
         foreach (range(1,50) as $index) {
             DB :: table('products') -> insert([
                 'username' => $faker->username,
-                'firstname' => $faker->firstname,
+                'firstname' => $faker->firstname, //ksjdhfk
                 'lastname' => $faker->lastname,
                 'password'=> $faker->password,
                 'email'=> $faker->email,
