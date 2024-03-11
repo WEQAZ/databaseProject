@@ -21,6 +21,15 @@
                     <x-nav-link :href="route('member')" :active="request()->routeIs('member')">
                         {{ __('Member') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('vip_member')" :active="request()->routeIs('vip_member')">
+                        {{ __('Member VIP') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('cart')" :active="request()->routeIs('cart')">
+                        {{ __('Cart') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('summary')" :active="request()->routeIs('summary')">
+                        {{ __('Summary') }}
+                    </x-nav-link>
                 </div>
             </div>
 
