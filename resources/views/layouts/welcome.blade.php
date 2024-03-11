@@ -35,6 +35,7 @@
         </div>
     </nav>
     <div class="text text-white">
+        
         @yield('content')
     </div>
 </body>
