@@ -1,18 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,4 +24,7 @@ Route::get('/vip_member', function () {return view('vip_member');})->name('vip_m
 Route::get('/cart', function () {return view('cart');})->name('cart');
 Route::get('/summary', function () {return view('summary');})->name('summary');
 
+// Student - Image CRUD
+Route::get('/add-product', [ProductController::class, 'index']);
+Route::post('/add-product',[ProductController::class, 'store']);
 require __DIR__ . '/auth.php';
