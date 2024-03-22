@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="">price</label>
-                                    <input type="number" name="price" class="form-control">
+                                    <input type="integer" name="price" class="form-control">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="">category_id</label>

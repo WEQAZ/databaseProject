@@ -5,20 +5,7 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-    <!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
+
     <div class="bg-white">
         <!--
       Mobile menu
@@ -321,6 +308,7 @@
                 </div>
             </div>
         </div>
+
 
         <header class="relative bg-white">
             <p
@@ -669,9 +657,161 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div
+                                                    class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+                                                    <div>
+                                                        <h2
+                                                            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                                                            Technical Specifications</h2>
+                                                        <p class="mt-4 text-gray-500">The walnut wood card tray is
+                                                            precision milled to perfectly fit a stack of Focus cards.
+                                                            The powder coated steel divider separates active cards from
+                                                            new ones, or can be used to archive important task lists.
+                                                        </p>
+
+                                                        <dl
+                                                            class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+                                                            <div class="border-t border-gray-200 pt-4">
+                                                                <dt class="font-medium text-gray-900">Origin</dt>
+                                                                <dd class="mt-2 text-sm text-gray-500">Designed by Good
+                                                                    Goods, Inc.</dd>
+                                                            </div>
+                                                            <div class="border-t border-gray-200 pt-4">
+                                                                <dt class="font-medium text-gray-900">Material</dt>
+                                                                <dd class="mt-2 text-sm text-gray-500">Solid walnut
+                                                                    base with rare earth magnets and powder coated steel
+                                                                    card cover</dd>
+                                                            </div>
+                                                            <div class="border-t border-gray-200 pt-4">
+                                                                <dt class="font-medium text-gray-900">Dimensions</dt>
+                                                                <dd class="mt-2 text-sm text-gray-500">6.25&quot; x
+                                                                    3.55&quot; x 1.15&quot;</dd>
+                                                            </div>
+                                                            <div class="border-t border-gray-200 pt-4">
+                                                                <dt class="font-medium text-gray-900">Finish</dt>
+                                                                <dd class="mt-2 text-sm text-gray-500">Hand sanded and
+                                                                    finished with natural oil</dd>
+                                                            </div>
+                                                            <div class="border-t border-gray-200 pt-4">
+                                                                <dt class="font-medium text-gray-900">Includes</dt>
+                                                                <dd class="mt-2 text-sm text-gray-500">Wood card tray
+                                                                    and 3 refill packs</dd>
+                                                            </div>
+                                                            <div class="border-t border-gray-200 pt-4">
+                                                                <dt class="font-medium text-gray-900">Considerations
+                                                                </dt>
+                                                                <dd class="mt-2 text-sm text-gray-500">Made from
+                                                                    natural materials. Grain and color vary with each
+                                                                    item.</dd>
+                                                            </div>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+                                                        <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg"
+                                                            alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
+                                                            class="rounded-lg bg-gray-100">
+                                                        <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg"
+                                                            alt="Top down view of walnut card tray with embedded magnets and card groove."
+                                                            class="rounded-lg bg-gray-100">
+                                                        <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg"
+                                                            alt="Side of walnut card tray with card groove and recessed card area."
+                                                            class="rounded-lg bg-gray-100">
+                                                        <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
+                                                            alt="Walnut card tray filled with cards and card angled in dedicated groove."
+                                                            class="rounded-lg bg-gray-100">
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="relative overflow-hidden bg-white">
+                                                <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+                                                    <div
+                                                        class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+                                                        <div class="sm:max-w-lg">
+                                                            <h1
+                                                                class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                                                                Summer styles are finally here</h1>
+                                                            <p class="mt-4 text-xl text-gray-500">This year, our new
+                                                                summer collection will shelter you from the harsh
+                                                                elements of a world that doesn't care if you live or
+                                                                die.</p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="mt-10">
+                                                                <!-- Decorative image grid -->
+                                                                <div aria-hidden="true"
+                                                                    class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+                                                                    <div
+                                                                        class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                                                                        <div
+                                                                            class="flex items-center space-x-6 lg:space-x-8">
+                                                                            <div
+                                                                                class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                                                                <div
+                                                                                    class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                                                                                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                                                                                        alt=""
+                                                                                        class="h-full w-full object-cover object-center">
+                                                                                </div>
+                                                                                <div
+                                                                                    class="h-64 w-44 overflow-hidden rounded-lg">
+                                                                                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
+                                                                                        alt=""
+                                                                                        class="h-full w-full object-cover object-center">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                                                                <div
+                                                                                    class="h-64 w-44 overflow-hidden rounded-lg">
+                                                                                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
+                                                                                        alt=""
+                                                                                        class="h-full w-full object-cover object-center">
+                                                                                </div>
+                                                                                <div
+                                                                                    class="h-64 w-44 overflow-hidden rounded-lg">
+                                                                                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
+                                                                                        alt=""
+                                                                                        class="h-full w-full object-cover object-center">
+                                                                                </div>
+                                                                                <div
+                                                                                    class="h-64 w-44 overflow-hidden rounded-lg">
+                                                                                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                                                                                        alt=""
+                                                                                        class="h-full w-full object-cover object-center">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                                                                <div
+                                                                                    class="h-64 w-44 overflow-hidden rounded-lg">
+                                                                                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                                                                                        alt=""
+                                                                                        class="h-full w-full object-cover object-center">
+                                                                                </div>
+                                                                                <div
+                                                                                    class="h-64 w-44 overflow-hidden rounded-lg">
+                                                                                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                                                                                        alt=""
+                                                                                        class="h-full w-full object-cover object-center">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <a href="#"
+                                                                    class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">Shop
+                                                                    Collection</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -727,10 +867,16 @@
                                     <span class="sr-only">items in cart, view bag</span>
                                 </a>
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
             </nav>
         </header>
+
     </div>
 </x-app-layout>

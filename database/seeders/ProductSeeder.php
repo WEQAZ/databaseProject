@@ -15,18 +15,60 @@ class ProductSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        foreach (range(1,50) as $index) {
-            DB :: table('products') -> insert([
-                'username' => $faker->username,
-                'firstname' => $faker->firstname, //ksjdhfk
-                'lastname' => $faker->lastname,
-                'password'=> $faker->password,
-                'email'=> $faker->email,
-                'gender' => $faker->randomElement(['male', 'female']),
-                'age' => random_int(18,50),
-                'created_at' => now(),
-                'updated_at' => now()
-            ]);
-        }
+        $product = [
+            ['id' => 1,
+                 'name' => 'Shirt', 
+                 'description' => 'black' ,
+                 'quantity' => random_int(1, 100) ,
+                 'price'=> number_format($faker->randomFloat(2, 100, 1000), 2),
+                 'category_id'=> '2' ,
+                 'pic' => 'product_data/images/shirt.jpg',
+                 'created_at' => now(), 
+                 'updated_at' => now()
+            ],
+            ['id' => 2,
+                 'name' => 'Jacket', 
+                 'description' => '' ,
+                 'quantity' => random_int(1, 100) ,
+                 'price'=> number_format($faker->randomFloat(2, 100, 1000), 2),
+                 'category_id'=> '2' ,
+                 'pic' => 'product_data/images/jacket.jpg',
+                 'created_at' => now(), 
+                 'updated_at' => now()
+            ],
+            ['id' => 3,
+                 'name' => 'Air Purifier', 
+                 'description' => 'pm-2.5' ,
+                 'quantity' => random_int(1, 100) ,
+                 'price'=> number_format($faker->randomFloat(2, 100, 1000), 2),
+                 'category_id'=> '1' ,
+                 'pic' => 'product_data/images/airpurifier.jpg',
+                 'created_at' => now(), 
+                 'updated_at' => now()
+            ],
+            ['id' => 4,
+                 'name' => 'Tonpo', 
+                 'description' => 'human' ,
+                 'quantity' => random_int(1, 100) ,
+                 'price'=> 0.11,
+                 'category_id'=> '3' ,
+                 'pic' => 'product_data/images/tonpo.jpg',
+                 'created_at' => now(), 
+                 'updated_at' => now()
+            ],
+            ['id' => 5,
+                 'name' => 'Win', 
+                 'description' => 'human' ,
+                 'quantity' => random_int(1, 100) ,
+                 'price'=> 999.99,
+                 'category_id'=> '3' ,
+                 'pic' => 'product_data/images/Win.jpg',
+                 'created_at' => now(), 
+                 'updated_at' => now()
+            ],
+        
+        ];
+            
+            DB::table('products')->insert($product);
     }
 }
