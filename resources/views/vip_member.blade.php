@@ -6,6 +6,7 @@
         </h2>
     </x-slot>
 
+    <div class="bg-white">
     <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <div class="px-4 sm:px-0">
           <h3 class="text-base font-semibold leading-7 text-gray-900">VIP Member</h3>
@@ -71,5 +72,6 @@
           </dl>
         </div>
       </div>
+    </div>
       
 </x-app-layout>
