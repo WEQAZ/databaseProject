@@ -290,10 +290,10 @@
 
                     <div class="space-y-6 border-t border-gray-200 px-4 py-6">
                         <div class="flow-root">
-                            <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Sign in</a>
+                            <a href="/vip_register" class="-m-2 block p-2 font-medium text-gray-900">Sign in</a>
                         </div>
                         <div class="flow-root">
-                            <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Create account</a>
+                            <a href="/vip_register" class="-m-2 block p-2 font-medium text-gray-900">Create account</a>
                         </div>
                     </div>
 
@@ -334,7 +334,7 @@
                             <a href="#">
                                 <span class="sr-only">Your Company</span>
                                 <img class="h-8 w-auto"
-                                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                    src="upload/images/logo.png"
                                     alt="">
                             </a>
                         </div>
@@ -803,7 +803,7 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <a href="#"
+                                                                <a href="/product"
                                                                     class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">Shop
                                                                     Collection</a>
                                                             </div>
@@ -825,11 +825,11 @@
 
                         <div class="ml-auto flex items-center">
                             <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                                <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign
+                                <a href="/vip_register" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign
                                     in</a>
                                 <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-                                <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Create
-                                    account</a>
+                                <a href="/vip_register" class="text-sm font-medium text-gray-700 hover:text-gray-800">Join VIP member
+                                    </a>
                             </div>
 
                             <div class="hidden lg:ml-8 lg:flex">

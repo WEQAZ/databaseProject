@@ -12,6 +12,7 @@
           <h3 class="text-base font-semibold leading-7 text-gray-900">VIP Member</h3>
           <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and application.</p>
         </div>
+        
         <div class="mt-6 border-t border-gray-100">
           <dl class="divide-y divide-gray-100">
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">

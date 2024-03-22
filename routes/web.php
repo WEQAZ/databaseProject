@@ -24,9 +24,11 @@ Route::get('/vip_member', function () {return view('vip_member');})->name('vip_m
 Route::get('/cart', function () {return view('cart');})->name('cart');
 Route::get('/summary', function () {return view('summary');})->name('summary');
 
-// Student - Image CRUD
+// Product - Image CRUD
 Route::get('/add-product', [ProductController::class, 'index']);
 Route::post('/add-product',[ProductController::class, 'store']);
 
+// VIP member - register
+Route::get('vip_register', function () {return view('vip_register');})->name('vip_register');
 
 require __DIR__ . '/auth.php';
