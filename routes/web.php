@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProductController::class, 'fetchPublic'])->name('welcome');
@@ -27,7 +28,9 @@ Route::get('/add-product', [ProductController::class, 'index']);
 Route::post('/add-product',[ProductController::class, 'store']);
 
 // VIP member - register
-Route::get('vip_register', function () {return view('vip_register');})->name('vip_register');
+Route::get('vip_register', [CustomerController::class, 'showRegistCust'])->name('vip_register');
+Route::post('post_cust', [CustomerController::class, 'registerCust'])->name('post_cust');
+Route::get('memberRegist', [CustomerController::class, 'showRegistMem'])->name('vip_register');
 
 // Cart - CRUD
 

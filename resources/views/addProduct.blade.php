@@ -17,7 +17,7 @@
                             <a href="{{ url('add-product') }}">Add Product</a>
                         </div>
                         <div class="bg-white card-body">
-                            @csrf
+                           
                             <form action="{{ url('add-product') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group mb-3">
