@@ -347,7 +347,7 @@
                                         <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
                                         <button type="button"
                                             class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
-                                            aria-expanded="false">Women</button>
+                                            aria-expanded="false">IT gadgets</button>
                                     </div>
 
                                     <!--
@@ -372,7 +372,7 @@
                                                         <div class="group relative text-base sm:text-sm">
                                                             <div
                                                                 class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                                                <img src="https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg"
+                                                                <img src="product_data/images/jacket.jpg"
                                                                     alt="Models sitting back to back, wearing Basic Tee in black and bone."
                                                                     class="object-cover object-center">
                                                             </div>
@@ -514,7 +514,7 @@
                                         <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
                                         <button type="button"
                                             class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
-                                            aria-expanded="false">Men</button>
+                                            aria-expanded="false">Fashion&Lifestyle</button>
                                     </div>
 
                                     <!--
@@ -539,7 +539,7 @@
                                                         <div class="group relative text-base sm:text-sm">
                                                             <div
                                                                 class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                                                <img src="https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg"
+                                                                <img src="product_data/images/jacket.jpg"
                                                                     alt="Drawstring top with elastic loop closure and textured interior padding."
                                                                     class="object-cover object-center">
                                                             </div>
@@ -547,14 +547,14 @@
                                                                 class="mt-6 block font-medium text-gray-900">
                                                                 <span class="absolute inset-0 z-10"
                                                                     aria-hidden="true"></span>
-                                                                New Arrivals
+                                                                New Jacket Arrivals
                                                             </a>
                                                             <p aria-hidden="true" class="mt-1">Shop now</p>
                                                         </div>
                                                         <div class="group relative text-base sm:text-sm">
                                                             <div
                                                                 class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                                                <img src="https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg"
+                                                                <img src="product_data/images/airpurifier.jpg"
                                                                     alt="Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt."
                                                                     class="object-cover object-center">
                                                             </div>
@@ -562,7 +562,7 @@
                                                                 class="mt-6 block font-medium text-gray-900">
                                                                 <span class="absolute inset-0 z-10"
                                                                     aria-hidden="true"></span>
-                                                                Artwork Tees
+                                                                Air purifier
                                                             </a>
                                                             <p aria-hidden="true" class="mt-1">Shop now</p>
                                                         </div>
@@ -570,32 +570,32 @@
                                                     <div class="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
                                                         <div>
                                                             <p id="Clothing-heading"
-                                                                class="font-medium text-gray-900">Clothing</p>
+                                                                class="font-medium text-gray-900">Food & Drink</p>
                                                             <ul role="list" aria-labelledby="Clothing-heading"
                                                                 class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Tops</a>
+                                                                        class="hover:text-gray-800">Lunch</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Pants</a>
+                                                                        class="hover:text-gray-800">Dragon_fruit</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Sweaters</a>
+                                                                        class="hover:text-gray-800">Matcha</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">T-Shirts</a>
+                                                                        class="hover:text-gray-800">Sashimi</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Jackets</a>
+                                                                        class="hover:text-gray-800">Tea</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Activewear</a>
+                                                                        class="hover:text-gray-800">Water</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
@@ -604,56 +604,51 @@
                                                             </ul>
                                                         </div>
                                                         <div>
-                                                            <p id="Accessories-heading"
-                                                                class="font-medium text-gray-900">Accessories</p>
-                                                            <ul role="list" aria-labelledby="Accessories-heading"
+                                                            <p id="Spiritual-Anchor-heading"
+                                                                class="font-medium text-gray-900">Spiritual Anchor</p>
+                                                            <ul role="list" aria-labelledby="Spiritual-Anchor-heading"
                                                                 class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Watches</a>
+                                                                        class="hover:text-gray-800">Daddy</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Wallets</a>
+                                                                        class="hover:text-gray-800">Sheet1</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Bags</a>
+                                                                        class="hover:text-gray-800">Sheet2</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Sunglasses</a>
+                                                                        class="hover:text-gray-800">Tonpo</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Hats</a>
+                                                                        class="hover:text-gray-800">Win</a>
                                                                 </li>
-                                                                <li class="flex">
-                                                                    <a href="#"
-                                                                        class="hover:text-gray-800">Belts</a>
-                                                                </li>
+                                                                
                                                             </ul>
                                                         </div>
                                                         <div>
                                                             <p id="Brands-heading" class="font-medium text-gray-900">
-                                                                Brands</p>
+                                                                Fashion&Lifestyle</p>
                                                             <ul role="list" aria-labelledby="Brands-heading"
                                                                 class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Re-Arranged</a>
+                                                                        class="hover:text-gray-800">Shirt</a>
                                                                 </li>
                                                                 <li class="flex">
                                                                     <a href="#"
-                                                                        class="hover:text-gray-800">Counterfeit</a>
+                                                                        class="hover:text-gray-800">Jacket</a>
                                                                 </li>
                                                                 <li class="flex">
-                                                                    <a href="#" class="hover:text-gray-800">Full
-                                                                        Nelson</a>
+                                                                    <a href="#" class="hover:text-gray-800">Bear</a>
                                                                 </li>
                                                                 <li class="flex">
-                                                                    <a href="#" class="hover:text-gray-800">My
-                                                                        Way</a>
+                                                                    <a href="#" class="hover:text-gray-800">Diamond</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -817,9 +812,14 @@
                                 </div>
 
                                 <a href="#"
-                                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Company</a>
+                                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Spiritual Anchor</a>
                                 <a href="#"
-                                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Stores</a>
+                                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Living Things</a>
+                                <a href="#"
+                                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Food&Drink</a>
+                                <a href="#"
+                                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Plant&Garden</a>
+                            
                             </div>
                         </div>
 
