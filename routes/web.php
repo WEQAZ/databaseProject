@@ -29,4 +29,7 @@ Route::post('/add-product',[ProductController::class, 'store']);
 // VIP member - register
 Route::get('vip_register', function () {return view('vip_register');})->name('vip_register');
 
+// Cart - CRUD
+
+
 require __DIR__ . '/auth.php';
