@@ -18,6 +18,12 @@ class ProductController extends Controller
         $productAll = Product::all();
         return view('productPage', compact('productAll'));
     }
+
+    public function fetchPublic()
+    {
+        $productAll = Product::all();
+        return view('welcome', compact('productAll'));
+    }
     public function store(Request $request)
     {
         $product = new Product;
