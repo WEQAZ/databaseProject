@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->bigInteger('user_id')->unsigned(); // Removed autoIncrement()
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('pic');
+            $table->string('product_name');
             $table->string('description');
             $table->integer('quantity');
             $table->decimal('price');

@@ -21,12 +21,13 @@ Route::middleware('auth')->group(function () {
 Route::get('/product', [ProductController::class, 'fetch'])->name('product');
 Route::get('/member',[ProfileController::class, 'view'])->name('member');
 Route::get('/vip_member', [CustomerController::class, 'showVIPinfo'])->name('vip_member');
-Route::get('/cart', function () {return view('cart');})->name('cart');
+Route::get('/cart', [CartController::class, 'show_cart'])->name('cart');
 Route::get('/summary', function () {return view('summary');})->name('summary');
 
 // Product - Image CRUD
 Route::get('/add-product', [ProductController::class, 'index']);
 Route::post('/add-product',[ProductController::class, 'store']);
+
 
 // VIP member - register
 Route::get('vip_register', [CustomerController::class, 'showRegistCust'])->name('vip_register');
@@ -34,6 +35,6 @@ Route::post('post_cust', [CustomerController::class, 'registerCust'])->name('pos
 
 // Cart - CRUD
 Route::post('add_cart/{id}', [CartController::class, 'add_cart'])->name('add_cart');
-
+Route::get('delete_cart/{id}', [CartController::class, 'delete_cart'])->name('delete_cart');
 
 require __DIR__ . '/auth.php';

@@ -8,6 +8,7 @@ use App\Models\Cart;
 use Illuminate\Support\Facades\Auth;
 
 
+
 class CartController extends Controller
 {
     public function add_cart(Request $request, $id)
@@ -19,13 +20,27 @@ class CartController extends Controller
             'product_id' => $product->id,
             'user_id' => $user->id,
             'pic' => $product->pic,
+            'product_name' => $product->name,
             'description' => $product->description,
             'quantity' => $request->quantity,
             'price' => $product->price,
             
         ]);
-        // dd($user);
-        // dd($product);
         return redirect()->back();
+    }
+
+    public function delete_cart($id)
+    {
+        
+        $product = product::find($id);
+        $product->delete();
+        dd($product);
+        // return redirect()->back();
+    }
+
+    public function show_cart(){
+        $id = Auth::user()->id;
+        $cart = cart::where('user_id', '=', $id)->get();
+        return view('Cart',compact('cart'));
     }
 }
