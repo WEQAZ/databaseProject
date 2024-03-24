@@ -19,7 +19,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/product', [ProductController::class, 'fetch'])->name('product');
 Route::get('/member',[ProfileController::class, 'view'])->name('member');
-Route::get('/vip_member', function () {return view('vip_member');})->name('vip_member');
+Route::get('/vip_member', [CustomerController::class, 'showVIPinfo'])->name('vip_member');
 Route::get('/cart', function () {return view('cart');})->name('cart');
 Route::get('/summary', function () {return view('summary');})->name('summary');
 
@@ -30,7 +30,6 @@ Route::post('/add-product',[ProductController::class, 'store']);
 // VIP member - register
 Route::get('vip_register', [CustomerController::class, 'showRegistCust'])->name('vip_register');
 Route::post('post_cust', [CustomerController::class, 'registerCust'])->name('post_cust');
-Route::get('memberRegist', [CustomerController::class, 'showRegistMem'])->name('vip_register');
 
 // Cart - CRUD
 

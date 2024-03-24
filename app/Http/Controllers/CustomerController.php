@@ -7,6 +7,8 @@ use App\Models\Member;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CustomerController extends Controller
 {
@@ -21,9 +23,23 @@ class CustomerController extends Controller
         return view('memberRegist');
     }
 
+    public function showVIPinfo()
+    {
+        $customer = Auth::user()->customer;
+        $isEmpty = DB::table('customers')->doesntExist();
+        if ($isEmpty) {
+            return view('vip_register');
+        }
+        $member = DB::table('members')->where('customer_id', $customer->id)->first(); // Assuming a 'customer_id' foreign key
+        return view('vip_member', compact('customer', 'member'));
+
+    }
+
 
     public function registerCust(Request $request)
     {
+        $user = Auth::user();
+        $userId = $user->id;
         // Create a new customer
         $customer = Customer::create([
             'username' => $request->username,
@@ -33,6 +49,7 @@ class CustomerController extends Controller
             'password' => Hash::make($request->password),
             'gender' => $request->gender,
             'age' => $request->age,
+            'user_id' => $userId,
         ]);
 
         // Create a related member record
