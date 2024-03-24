@@ -13,7 +13,7 @@ class CartController extends Controller
     {
         $user = Auth::user()->Customer;
         $product = product::find($id);
-        // dd($user);
+        dd($user);
         dd($product);
         return redirect()->back();
     }
