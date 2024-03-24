@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
-use Illuminate\Support\Facades\Auth;
 use App\Models\Cart;
+use Illuminate\Support\Facades\Auth;
+
 
 class CartController extends Controller
 {
@@ -13,8 +14,18 @@ class CartController extends Controller
     {
         $user = Auth::user()->Customer;
         $product = product::find($id);
-        dd($user);
-        dd($product);
+
+        $cart = Cart::create([
+            'product_id' => $product->id,
+            'user_id' => $user->id,
+            'pic' => $product->pic,
+            'description' => $product->description,
+            'quantity' => $request->quantity,
+            'price' => $product->price,
+            
+        ]);
+        // dd($user);
+        // dd($product);
         return redirect()->back();
     }
 }

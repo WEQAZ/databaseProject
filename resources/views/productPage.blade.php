@@ -24,7 +24,6 @@
                             <div>
                                 <h3 class="text-sm text-gray-700">
                                     <a href="#">
-                                        <span aria-hidden="true" class="absolute inset-0"></span>
                                         {{ $item->name }}
                                     </a>
                                 </h3>
@@ -32,7 +31,7 @@
                             </div>
                             <p class="text-sm font-medium text-gray-900">${{ $item->price }}</p>
                         </div>
-                        <form action="{{ route('cart', $item->id) }}" method="POST" class="ml-4">
+                        <form action="{{ url('add_cart', $item->id) }}" method="POST" class="ml-4">
                             @csrf
                             <div class="row justify-center mx-2 my-2 ">
                                 <div class="col-md-4">
@@ -41,7 +40,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <input type="submit"
-                                        value="Add"class="h-8 px-4 py-2 bg-indigo-500 border border-transparent rounded-md font-medium text-xs text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                                        value="Add"class="h-8 px-4 py-2 bg-indigo-500 border border-transparent rounded-md font-medium text-xs text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
 
                                 </div>
                             </div>
