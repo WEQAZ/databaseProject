@@ -4,9 +4,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProductController::class, 'fetchPublic'])->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -30,5 +28,8 @@ Route::post('/add-product',[ProductController::class, 'store']);
 
 // VIP member - register
 Route::get('vip_register', function () {return view('vip_register');})->name('vip_register');
+
+// Cart - CRUD
+
 
 require __DIR__ . '/auth.php';

@@ -18,6 +18,12 @@ class ProductController extends Controller
         $productAll = Product::all();
         return view('productPage', compact('productAll'));
     }
+
+    public function fetchPublic()
+    {
+        $productAll = Product::all();
+        return view('welcome', compact('productAll'));
+    }
     public function store(Request $request)
     {
         $product = new Product;
@@ -32,7 +38,8 @@ class ProductController extends Controller
 
             $file = $request->file('pic');
             $extension = $file->getClientOriginalExtension(); 
-            $filename = time() . '.' . $extension;
+            // $filename = time() . '.' . $extension;
+            $filename = 'product_data/images/' . time() . '.' . $extension;
 
             $file->move('product_data/images/', $filename);
             $product->pic = $filename;
