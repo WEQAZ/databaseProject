@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProductController::class, 'fetchPublic'])->name('welcome');
@@ -32,6 +33,7 @@ Route::get('vip_register', [CustomerController::class, 'showRegistCust'])->name(
 Route::post('post_cust', [CustomerController::class, 'registerCust'])->name('post_cust');
 
 // Cart - CRUD
+Route::post('add_cart/{id}', [CartController::class, 'add_cart'])->name('add_cart');
 
 
 require __DIR__ . '/auth.php';

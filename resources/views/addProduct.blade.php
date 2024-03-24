@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="">quantity</label>
-                                    <input type="text" name="quantity" class="form-control">
+                                    <input type="integer" name="quantity" class="form-control">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="">price</label>
