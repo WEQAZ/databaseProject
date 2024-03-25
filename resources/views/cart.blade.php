@@ -25,13 +25,18 @@
                             <div class="flex flex-col ml-4 md:ml-6">
                                 <div class="text-base font-medium text-gray-900">
                                     <div class="flex items-center justify-between">
-                                        <h3 class="flex space-x-[760px]  text-lg font-semibold text-slate-900">
+                                        <h3 class="space-x-[760px]  text-lg font-semibold text-slate-900">
                                             <div>{{ $items->product_name }}</div>
 
                                             <form action="{{ url('/delete_cart', $items->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit">Delete</button>
+                                                <div class="btn btn-danger">
+                                                    <button class="" type="submit"
+                                                        style="flex items-center justify-center rounded-md border  px-3 py-3 text-base font-medium  absolute">Delete</button>
+
+                                                </div>
+
                                             </form>
 
                                         </h3>
