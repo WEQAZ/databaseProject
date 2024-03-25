@@ -2,14 +2,14 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Order Summary') }}
+            {{ __('Order History Summary') }}
         </h2>
     </x-slot>
 
     @php
         $total = 0;
     @endphp
-    @foreach ($carts as $items)
+    
     <div class="container mx-auto px-4 py-8 ">
         <div class="flex flex-col md:flex-row md:space-x-8">
             <div class="w-full md:w-3/5 bg-white border rounded-md p-4 shadow-sm">
@@ -59,8 +59,13 @@
                         @endphp
 
                         <div class="flex justify-between pt-2 border-t mt-2 font-bold">
-                            <span class="text-xl">Total</span>
+                            <span class="text-xl">Total </span>
                             <span class="text-xl">${{ $total }}</span>
+                        </div>
+
+                        <div class="flex justify-between pt-2  mt-1 font-bold">
+                            <span class="text-xl">remained member VIP points: </span>
+                            <span class="text-xl">{{ ceil(1000 + ($total/100 )) }} points</span>
                         </div>
                     
                 </div>
@@ -80,11 +85,12 @@
                 
 
                 <div class="text-center mt-4">
-                    <h2 class="text-xl font-bold mb-3 ">Payment Details</h2>
+                    <h2 class="text-xl font-bold mb-3 ">Payment Details History</h2>
                 </div>
                 @foreach ($carts as $carts)
                      <div class="border rounded-md p-4 shadow-sm">
                         <p>Your payment method : {{$carts->payment_method}}</p>
+                        <p>Payment time : {{$carts->created_at}}</p>
                     </div>
                 @endforeach
                    
@@ -96,6 +102,6 @@
             </div>
         </div>
     </div>
-    @endforeach
+    
 
 </x-app-layout>
