@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
-use App\Models\Payment;
 use App\Models\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -46,23 +45,19 @@ class SummaryController extends Controller
         // Get the newly created order's ID
         $orderId = $order->id;
 
-        Payment::create([
-            'order_id' => $orderId, // Use the retrieved ID
-            'payment_method' => $request->payment_method,
-            'amount' => $total_amount,
-        ]);
-
+        
         return redirect()->back();
     }
 
     public function show_summary()
     {
         $user = Auth::user();
+      
         $orders = Order::where('customer_id', $user->id)->first();
-        $payments = Payment::whereIn('order_id', $orders->pluck('id'))->get();
-        $carts = Cart::where('user_id', $user->id)->get();
-
-        return view('Summary', compact('orders', 'payments', 'carts'));
+        
+        $carts = Order::where('customer_id',$user->id)->get();
+        
+        return view('Summary', compact('orders', 'carts'));
     }
 
     public function post_summary(Request $request)
@@ -83,13 +78,12 @@ class SummaryController extends Controller
             $order->country = $request->country;
             $order->postalcode = $request->postalcode;
             $order->phonenumber = $request->phonenumber;
+            $order->payment_method = $request->payment_method;
             $order -> save();
 
             $cart_id = $data->id;
             $cart=cart::find($cart_id);
             $cart->delete();
-            
-            
         }
         
         

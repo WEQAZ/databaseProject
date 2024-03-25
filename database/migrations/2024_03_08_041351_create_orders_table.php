@@ -17,12 +17,13 @@ return new class extends Migration
             $table->foreign('customer_id')->references('id')->on('customers');
             $table->integer('quantity')->nullable; 
             $table->string('name')->nullable; 
-            $table->integer('price')->nullable; 
+            $table->decimal('price')->nullable; 
             $table->string('address')->nullable;
             $table->string('province')->nullable;
             $table->string('country')->nullable;
             $table->Integer('postalcode')->nullable;
             $table->Integer('phonenumber')->nullable;
+            $table->string('payment_method')->nullable;
             $table->timestamps();
         });
     }

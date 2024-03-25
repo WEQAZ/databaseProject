@@ -8,8 +8,10 @@
     <div class="bg-white py-16 px-6 sm:px-8">
         <div class="max-w-7xl mx-auto border border-gray-300 rounded-lg shadow-md">
             <div class="p-6">
-                <h2 class="text-lg font-medium text-gray-900">Your Shopping Cart</h2>
-
+                <h2 class="text-lg font-medium text-gray-900 mt-2">Your Shopping Cart</h2>
+                @if (session('message'))
+                    <h6 class="alert alert-success"> {{ session('message') }} </h6>
+                @endif
                 <ul role="list" class="my-6 grid grid-cols-1 md:grid-cols--2 gap-4">
                     @php
                         $totalprice = 0;
@@ -25,12 +27,12 @@
                                     <div class="flex items-center justify-between">
                                         <h3 class="flex space-x-[760px]  text-lg font-semibold text-slate-900">
                                             <div>{{ $items->product_name }}</div>
-                                            
+
                                             <form action="{{ url('/delete_cart', $items->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit">Delete</button>
-                                            </form> 
+                                            </form>
 
                                         </h3>
 
@@ -69,7 +71,7 @@
 
                     {{-- Address Form --}}
                     {{-- <form action="{{ url('post_address_payment')}}" method="POST" enctype="multipart/form-data"> --}}
-                        <form action="{{ url('post_summary')}}"  enctype="multipart/form-data">
+                    <form action="{{ url('post_summary') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="flex justify-between text-base font-medium text-gray-900 mt-4">
                             <p>Address Information</p>
@@ -78,14 +80,14 @@
                             <label for="Address"
                                 class="block text-sm font-medium leading-6 text-gray-900">Address</label>
                             <div class="mt-2">
-                                <input type="text" name="address" id="address"
-                                    autocomplete="address"
+                                <input type="text" name="address" id="address" autocomplete="address"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
 
                         <div class="sm:col-span-2 sm:col-start-1 mt-1">
-                            <label for="province" class="block text-sm font-medium leading-6 text-gray-900">Province</label>
+                            <label for="province"
+                                class="block text-sm font-medium leading-6 text-gray-900">Province</label>
                             <div class="mt-2">
                                 <input type="text" name="province" id="province" autocomplete="address-level2"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
@@ -93,7 +95,8 @@
                         </div>
 
                         <div class="sm:col-span-2 mt-2">
-                            <label for="country" class="block text-sm font-medium leading-6 text-gray-900" >Country</label>
+                            <label for="country"
+                                class="block text-sm font-medium leading-6 text-gray-900">Country</label>
                             <div class="mt-2">
                                 <input type="text" name="country" id="country" autocomplete="address-level1"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
@@ -133,11 +136,11 @@
                                 </select>
                             </div>
                         </div>
-                        
-                        
+
+
 
                         <div class="flex mt-6 justify-center">
-                            <button type="submit" 
+                            <button type="submit"
                                 class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                                 Checkout
                             </button>
