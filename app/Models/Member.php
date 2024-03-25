@@ -14,9 +14,15 @@ class Member extends Model
         'name', 
         'point', 
         'customer_id',
+        'user_id',
     ];
     public function customer(): BelongsTo
     {
         return $this->belongsTo(Customer::class);
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'id');
     }
 }

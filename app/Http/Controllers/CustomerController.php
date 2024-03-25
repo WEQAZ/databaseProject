@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use App\Models\Member;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
@@ -26,11 +27,16 @@ class CustomerController extends Controller
     public function showVIPinfo()
     {
         $customer = Auth::user()->customer;
+        $user = Auth::user();
         $isEmpty = DB::table('customers')->doesntExist();
         if ($isEmpty) {
             return view('vip_register');
         }
-        $member = DB::table('members')->where('customer_id', $customer->id)->first(); // Assuming a 'customer_id' foreign key
+        if ($customer) {
+            return view('vip_register');
+        }
+        $customer = DB::table('customers')->where('user_id', $user->id)->first();
+        $member = DB::table('members')->where('user_id', $user->id)->first();
         return view('vip_member', compact('customer', 'member'));
 
     }
@@ -57,6 +63,7 @@ class CustomerController extends Controller
             'name' => $request->username, // Assuming username corresponds to the name field in Member
             'point' => 1000, // Set default point value or as per your requirements
             'customer_id' => $customer->id, // Associate member with the newly created customer
+            'user_id' => $user->id,
         ]);
 
         return redirect('/vip_register')->with('message', 'Registration successful!');

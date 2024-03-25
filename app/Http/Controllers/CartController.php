@@ -13,7 +13,8 @@ class CartController extends Controller
 {
     public function add_cart(Request $request, $id)
     {
-        $user = Auth::user()->Customer;
+        // $user = Auth::user()->Customer;
+        $user = Auth::user();
         $product = product::find($id);
 
         $cart = Cart::create([
@@ -29,14 +30,13 @@ class CartController extends Controller
         return redirect()->back();
     }
 
-    public function delete_cart($id)
-    {
-        
-        $product = product::find($id);
-        $product->delete();
-        // dd($product);
-        return redirect()->back();
-    }
+    // public function delete_cart($id)
+    // {    
+    //     $product = product::find($id);
+    //     $product->delete();
+    //     // dd($product);
+    //     return redirect()->back();
+    // }
 
     
 

@@ -25,7 +25,7 @@
                 <h3 class="flex space-x-[760px]  text-lg font-semibold text-slate-900">
                     <div>{{$items->product_name}}</div>
                     
-          <a href="{{ url('delete_cart', ['id' => $items->product_id]) }}" onclick="return confirm('Are you sure to delete {{$items->product_name}} ?')"class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 absolute">
+          {{-- <a href="{{ url('delete_cart', ['id' => $items->product_id]) }}" onclick="return confirm('Are you sure to delete {{$items->product_name}} ?')"class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 absolute"> --}}
                 
           <img src="upload/images/bin-2.png" alt="" style="width: 20px; height: 20px;">
           </a>

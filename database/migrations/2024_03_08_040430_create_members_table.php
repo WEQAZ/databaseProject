@@ -16,6 +16,8 @@ return new class extends Migration {
             $table->integer('point');
             $table->unsignedBigInteger('customer_id')->unique();
             $table->foreign('customer_id')->references('id')->on('customers');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
