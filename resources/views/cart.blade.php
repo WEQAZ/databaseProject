@@ -25,7 +25,7 @@
                                     <div class="flex items-center justify-between">
                                         <h3 class="flex space-x-[760px]  text-lg font-semibold text-slate-900">
                                             <div>{{ $items->product_name }}</div>
-{{-- 
+                                            {{-- 
                                             <a href="{{ url('delete_cart', $items->id) }} method="POST"
                                                 onclick="return confirm('Are you sure to delete {{ $items->product_name }} ?')"class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 absolute">
 
@@ -35,8 +35,8 @@
                                             <form action="{{ url('/delete_cart', $items->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="">Delete</button>
-                                               </form>
+                                                <button type="submit">Delete</button>
+                                            </form>
 
                                         </h3>
 
@@ -63,10 +63,73 @@
                         <p>${{ $totalprice }}</p>
                     </div>
                     <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
-                </div>
-                <div class="flex mt-6 justify-center">
-                    <a href="/summary"
-                        class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+
+
+                    {{-- Address Form --}}
+                    <form action="{{ url('post_address') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+
+
+                        <div class="flex justify-between text-base font-medium text-gray-900 mt-4">
+                            <p>Address Information</p>
+                        </div>
+                        <div class="col-span-full mt-2">
+                            <label for="street-address"
+                                class="block text-sm font-medium leading-6 text-gray-900">Address</label>
+                            <div class="mt-2">
+                                <input type="text" name="street-address" id="street-address"
+                                    autocomplete="street-address"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-2 sm:col-start-1 mt-1">
+                            <label for="city" class="block text-sm font-medium leading-6 text-gray-900">City</label>
+                            <div class="mt-2">
+                                <input type="text" name="city" id="city" autocomplete="address-level2"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-2 mt-2">
+                            <label for="region" class="block text-sm font-medium leading-6 text-gray-900">State /
+                                Province</label>
+                            <div class="mt-2">
+                                <input type="text" name="region" id="region" autocomplete="address-level1"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-2 mt-2">
+                            <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-900">ZIP /
+                                Postal code</label>
+                            <div class="mt-2">
+                                <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        
+                        <div class="sm:col-span-3 mt-2">
+                            <label for="PaymentMethod"
+                                class="flex justify-between text-base font-medium text-gray-900 mt-3 ">Payment
+                                Method</label>
+                            <div class="mt-2 ">
+                                <select id="PaymentMethod" name="PaymentMethod" autocomplete="PaymentMethod"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                                    <option>KIBO Wallet</option>
+                                    <option>Credit Card</option>
+                                    <option>Cash On Delivery</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        
+
+                        <div class="flex mt-6 justify-center">
+                            <a href="/summary"
+                                class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
