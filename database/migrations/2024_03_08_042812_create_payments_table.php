@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('order_id');
+            $table->unsignedBigInteger('order_id')->nullable;
             $table->foreign('order_id')->references('id')->on('orders');
-            $table->string('payment_method');
-            $table->decimal('amount');
+            $table->string('payment_method')->nullable;
+            $table->decimal('amount')->nullable;
             $table->timestamps();
         });
     }

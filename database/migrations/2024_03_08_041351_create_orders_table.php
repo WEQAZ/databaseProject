@@ -13,14 +13,16 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('customer_id');
+            $table->unsignedBigInteger('customer_id')->nullable;
             $table->foreign('customer_id')->references('id')->on('customers');
-            $table->integer('total_quantity'); 
-            $table->string('address');
-            $table->string('province');
-            $table->string('country');
-            $table->Integer('postalcode');
-            $table->Integer('phonenumber');
+            $table->integer('quantity')->nullable; 
+            $table->string('name')->nullable; 
+            $table->integer('price')->nullable; 
+            $table->string('address')->nullable;
+            $table->string('province')->nullable;
+            $table->string('country')->nullable;
+            $table->Integer('postalcode')->nullable;
+            $table->Integer('phonenumber')->nullable;
             $table->timestamps();
         });
     }

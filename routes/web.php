@@ -40,6 +40,7 @@ Route::delete('delete_cart/{id}', [CartController::class, 'delete_cart'])->name(
 
 // Summary - CRUD
 Route::post('post_address_payment', [SummaryController::class, 'add_address_payment'])->name('post_address_payment');
+Route::get('post_summary', [SummaryController::class, 'post_summary'])->name('post_summary');
 
 
 require __DIR__ . '/auth.php';

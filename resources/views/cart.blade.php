@@ -59,8 +59,17 @@
                     <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
 
 
+                    {{-- <div class="flex mt-6 justify-center">
+                        <a href="post_summary"
+                            class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+                            Checkout
+                        </a>
+                    </div> --}}
+
+
                     {{-- Address Form --}}
-                    <form action="{{ url('post_address_payment')}}" method="POST" enctype="multipart/form-data">
+                    {{-- <form action="{{ url('post_address_payment')}}" method="POST" enctype="multipart/form-data"> --}}
+                        <form action="{{ url('post_summary')}}"  enctype="multipart/form-data">
                         @csrf
                         <div class="flex justify-between text-base font-medium text-gray-900 mt-4">
                             <p>Address Information</p>
