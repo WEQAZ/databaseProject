@@ -4,6 +4,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\SummaryController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProductController::class, 'fetchPublic'])->name('welcome');
@@ -22,7 +23,7 @@ Route::get('/product', [ProductController::class, 'fetch'])->name('product');
 Route::get('/member',[ProfileController::class, 'view'])->name('member');
 Route::get('/vip_member', [CustomerController::class, 'showVIPinfo'])->name('vip_member');
 Route::get('/cart', [CartController::class, 'show_cart'])->name('cart');
-Route::get('/summary', function () {return view('summary');})->name('summary');
+Route::get('/summary', [SummaryController::class, 'show_summary'])->name('summary');
 
 // Product - Image CRUD
 Route::get('/add-product', [ProductController::class, 'index']);
@@ -36,5 +37,9 @@ Route::post('post_cust', [CustomerController::class, 'registerCust'])->name('pos
 // Cart - CRUD
 Route::post('add_cart/{id}', [CartController::class, 'add_cart'])->name('add_cart');
 Route::delete('delete_cart/{id}', [CartController::class, 'delete_cart'])->name('delete_cart');
+
+// Summary - CRUD
+Route::post('post_address_payment', [SummaryController::class, 'add_address_payment'])->name('post_address_payment');
+
 
 require __DIR__ . '/auth.php';

@@ -32,9 +32,7 @@ class CustomerController extends Controller
         if ($isEmpty) {
             return view('vip_register');
         }
-        if ($customer) {
-            return view('vip_register');
-        }
+        
         $customer = DB::table('customers')->where('user_id', $user->id)->first();
         $member = DB::table('members')->where('user_id', $user->id)->first();
         return view('vip_member', compact('customer', 'member'));

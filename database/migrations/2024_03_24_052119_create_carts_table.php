@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('carts', function (Blueprint $table) {
             $table->id()->unsigned()->bigIncrements();
             $table->unsignedBigInteger('product_id');
+            $table->foreign('product_id')->references('id')->on('products');
             $table->bigInteger('user_id')->unsigned(); // Removed autoIncrement()
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('pic');

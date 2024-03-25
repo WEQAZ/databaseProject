@@ -15,9 +15,12 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('customer_id');
             $table->foreign('customer_id')->references('id')->on('customers');
-            $table->string('order_number')->unique();
-            $table->decimal('total_amount', 8, 2); //8 digit
-            $table->string('status');
+            $table->integer('total_quantity'); 
+            $table->string('address');
+            $table->string('province');
+            $table->string('country');
+            $table->Integer('postalcode');
+            $table->Integer('phonenumber');
             $table->timestamps();
         });
     }

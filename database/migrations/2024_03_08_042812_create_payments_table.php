@@ -16,9 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('order_id');
             $table->foreign('order_id')->references('id')->on('orders');
             $table->string('payment_method');
-            $table->decimal('amount', 8, 2);
-            $table->string('transaction_id')->unique();
-            $table->string('status'); // e.g., 'pending', 'approved', 'failed'
+            $table->decimal('amount');
             $table->timestamps();
         });
     }
