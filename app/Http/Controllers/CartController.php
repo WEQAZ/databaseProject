@@ -30,13 +30,13 @@ class CartController extends Controller
         return redirect()->back();
     }
 
-    // public function delete_cart($id)
-    // {    
-    //     $product = product::find($id);
-    //     $product->delete();
-    //     // dd($product);
-    //     return redirect()->back();
-    // }
+    public function delete_cart($id)
+    {    
+        $cart = Cart::find($id);
+        $cart->delete();
+        
+        return redirect()->back();
+    }
 
     
 

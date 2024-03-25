@@ -35,6 +35,6 @@ Route::post('post_cust', [CustomerController::class, 'registerCust'])->name('pos
 
 // Cart - CRUD
 Route::post('add_cart/{id}', [CartController::class, 'add_cart'])->name('add_cart');
-// Route::get('/cart', [CartController::class, 'delete_cart'])->name('cart');
+Route::delete('delete_cart/{id}', [CartController::class, 'delete_cart'])->name('delete_cart');
 
 require __DIR__ . '/auth.php';
