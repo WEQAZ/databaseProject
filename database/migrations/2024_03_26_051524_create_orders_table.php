@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('customer_id')->nullable;
-            $table->foreign('customer_id')->references('id')->on('customers');
+            $table->Integer('order_number')->nullable;
+            $table->foreign('order_number')->references('order_number')->on('order_headers');
             $table->integer('quantity')->nullable; 
             $table->string('name')->nullable; 
             $table->decimal('price')->nullable; 
