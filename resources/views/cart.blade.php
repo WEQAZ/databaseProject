@@ -10,7 +10,12 @@
             <div class="p-6">
                 <h2 class="text-lg font-medium text-gray-900 mt-2">Your Shopping Cart</h2>
                 @if (session('message'))
-                    <h6 class="alert alert-success"> {{ session('message') }} </h6>
+                    <h6 class="alert alert-success">
+                        {{ session('message') }}
+                        <a href="/summary" class="text-blue-700 hover:text-blue-800 underline ml-5">
+                            See your order
+                        </a>
+                    </h6>
                 @endif
                 <ul role="list" class="my-6 grid grid-cols-1 md:grid-cols--2 gap-4">
                     @php
