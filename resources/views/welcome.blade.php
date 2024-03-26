@@ -24,13 +24,7 @@
                         </svg>
                     </button>
                 </div>
-                {{-- <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
-                </div>
-                 --}}
+                
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                     <a href="/register" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
                             aria-hidden="true">&rarr;</span></a>
@@ -91,7 +85,7 @@
                 <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                     <div
                         class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                        Unlock exclusive perks! Become a VIP member today. <a href="#"
+                        Unlock exclusive perks! Become a VIP member today. <a href="register"
                             class="font-semibold text-indigo-600"><span class="absolute inset-0"
                                 aria-hidden="true"></span>Register now <span aria-hidden="true">&rarr;</span></a>
                     </div>
