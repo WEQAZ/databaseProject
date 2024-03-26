@@ -11,19 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('order_headers', function (Blueprint $table) {
             $table->id();
+            $table->integer('order_number')->index();
             $table->unsignedBigInteger('customer_id')->nullable;
             $table->foreign('customer_id')->references('id')->on('customers');
-            $table->integer('quantity')->nullable; 
-            $table->string('name')->nullable; 
-            $table->decimal('price')->nullable; 
-            $table->string('address')->nullable;
-            $table->string('province')->nullable;
-            $table->string('country')->nullable;
-            $table->Integer('postalcode')->nullable;
-            $table->Integer('phonenumber')->nullable;
-            $table->string('payment_method')->nullable;
             $table->timestamps();
         });
     }
@@ -33,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('order_headers');
     }
 };
