@@ -70,7 +70,7 @@
                     </div>
 
 
-                    {{-- @if ($order['details']->isNotEmpty()) --}}
+                    @if ($order['details']->isNotEmpty())
                     @php
                         $firstDetail = $order['details']->first();
                     @endphp
@@ -90,9 +90,9 @@
                         <p>Your payment method: {{ $firstDetail->payment_method }}</p>
                         <p>Payment time: {{ $firstDetail->created_at }}</p>
                     </div>
-                {{-- @else --}}
+                @else
                     <p>No order details found for this order.</p>
-                {{-- @endif --}}
+                @endif
 
 
 
