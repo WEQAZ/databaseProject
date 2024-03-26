@@ -51,12 +51,16 @@ class SummaryController extends Controller
 
     public function show_summary()
     {
+        
         $user = Auth::user();
       
         $orders = Order::where('customer_id', $user->id)->first();
         
         $carts = Order::where('customer_id',$user->id)->get();
-        
+        if ($carts->isEmpty()) {
+           
+            return redirect()->route('cart');  
+        }
         return view('Summary', compact('orders', 'carts'));
     }
 
